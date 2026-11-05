@@ -1,4 +1,6 @@
 public class Apartment extends Property {
+    private static final int ELEVATOR_CHARGES = 40;
+
     private final int floor;
     private final boolean hasElevator;
 
@@ -18,5 +20,16 @@ public class Apartment extends Property {
 
     public boolean hasElevator() {
         return hasElevator;
+    }
+
+    @Override
+    public int getMonthlyCharges() {
+        return super.getMonthlyCharges() + (hasElevator ? ELEVATOR_CHARGES : 0);
+    }
+
+    @Override
+    public String toString() {
+        return "Apartment " + super.toString() + " | floor " + floor
+                + (hasElevator ? ", elevator" : ", no elevator");
     }
 }
