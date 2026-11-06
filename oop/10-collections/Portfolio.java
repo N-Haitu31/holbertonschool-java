@@ -78,7 +78,7 @@ public class Portfolio {
         }
         return total;
     }
-    
+
     public int getOccupancyRate() {
         if (properties.isEmpty()) {
             return 0;

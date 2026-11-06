@@ -2,7 +2,7 @@ import java.util.Objects;
 
 public class Property {
     private static final int CHARGES_PER_M2 = 2;
-    
+
     private final String reference;
     private Address address;
     private int surface;
